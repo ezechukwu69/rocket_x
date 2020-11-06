@@ -2,7 +2,7 @@ part of rocket_x;
 
 extension ContainerExtension on Container {
 
-    Container _container({double width, double height,AlignmentGeometry align, Key key, Clip clip, EdgeInsetsGeometry padding, Color color, Decoration decoration, BoxConstraints constraints, Decoration foregroundDecoration, EdgeInsetsGeometry margin, Matrix4 transform, AlignmentGeometry alignment}) {
+    Container _container({double width, double height,AlignmentGeometry align, Key key, Clip clip, EdgeInsetsGeometry padding, Color color, Decoration decoration, BoxConstraints constraints, Decoration foregroundDecoration, EdgeInsetsGeometry margin, Matrix4 transform, AlignmentGeometry alignment, AlignmentGeometry transformAlignment}) {
       return Container(
         child: this.child,
         width: width,
