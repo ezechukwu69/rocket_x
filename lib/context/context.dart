@@ -72,9 +72,9 @@ extension ContextExtension on BuildContext {
   ///
   ///  * [restorablePush], which pushes a route that can be restored during
   ///    state restoration.
-  void xPush({@required Object Page,bool fullscreenDialog, bool maintainState, RouteSettings settings}) {
+  void xPush({@required Object page,bool fullscreenDialog, bool maintainState, RouteSettings settings}) {
     Navigator.of(this).push(MaterialPageRoute(
-      builder: (context) => Page,
+      builder: (context) => page,
       fullscreenDialog: fullscreenDialog ?? false,
       maintainState: maintainState ?? true,
       settings: settings ?? RouteSettings()
@@ -102,7 +102,7 @@ extension ContextExtension on BuildContext {
   ///
   ///  * [restorablePushNamed], which pushes a route that can be restored
   ///    during state restoration.
-  void xPushNamed(@required String routeName, {Object arguments}) {
+  void xPushNamed(String routeName, {Object arguments}) {
     Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
 }
