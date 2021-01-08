@@ -41,8 +41,8 @@ class _XListenableState<T extends ChangeNotifier>
 /// A widget that listenens to changes in the [ValueNotifier] and updates when value changes
 class XValue<T> extends StatelessWidget {
   final ValueNotifier data;
-  Function(BuildContext context, T cValue, Widget child) builder;
-  Widget child;
+  final Function(BuildContext context, T cValue, Widget child) builder;
+  final Widget child;
   XValue(this.data, {this.builder, this.child});
   @override
   Widget build(BuildContext context) {

@@ -11,6 +11,7 @@ class RocketX {
     //     return _tempFields;
     //   // }
     // }
+    _tempFields.onInit();
     _fields.add(_tempFields);
     return controller;
   }
@@ -35,10 +36,9 @@ class RocketX {
       if (_tempFields != null) {
         _tempFields.dispose();
         _fields.removeWhere((e) => e.runtimeType == T);
-        log("${T} has been disposed", name: "[RocketX]");
       }
     } catch (e) {
-      log("${T.runtimeType} does not exist", name: "[RocketX]");
+      log("${T.runtimeType} does not exist", name: "RocketX");
     }
   }
 
