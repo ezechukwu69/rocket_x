@@ -34,7 +34,7 @@ extension ContainerExtension on Container {
 
   /// Adds a size to the [Container], this to be used as the last
   /// extension on the container class
-  Container build({double width, double height}) {
+  Container xBuild({double width, double height}) {
     return _container(width: width, height: height);
   }
 

@@ -1,3 +1,6 @@
+## [1.0.0] 08/02/2021
+* Rename xContainer from build to xBuild
+
 ## [0.0.1+9] 08/02/2021
 * Added stateless widget support
 
