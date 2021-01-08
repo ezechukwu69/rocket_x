@@ -1,3 +1,6 @@
+## [0.0.1+9] 08/02/2021
+* Added stateless widget support
+
 ## [0.0.1+8] 08/02/2021
 * Added dependency injection.
 * Added state management options [ XListenable ] and [ XValue ] to controller.
