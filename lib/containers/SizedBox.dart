@@ -1,6 +1,5 @@
 part of rocket_x;
 
-
 extension SizedExtension on SizedBox {
   SizedBox _sizedBox({Key key}) {
     return SizedBox(
@@ -11,6 +10,7 @@ extension SizedExtension on SizedBox {
     );
   }
 
+  /// Adds a [Key] to the container
   SizedBox xKey(Key key) {
     return _sizedBox(key: key);
   }

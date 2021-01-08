@@ -1,6 +1,5 @@
 part of rocket_x;
 
-
 extension ListExtension<T extends List<Widget>> on List {
   Column get xToColumn {
     return Column(

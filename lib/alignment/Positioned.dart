@@ -1,7 +1,7 @@
 part of rocket_x;
 
 extension PositionedExtension on Positioned {
-  Positioned _position({Key key,double width, double height}) {
+  Positioned _position({Key key, double width, double height}) {
     return Positioned(
       child: this.child,
       //

@@ -1,6 +1,7 @@
 library rocket_x;
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'dart:developer';
 
 part 'text/Text.dart';
 part 'list/Column.dart';
@@ -17,7 +18,6 @@ part 'containers/FractionallySizedBox.dart';
 part 'containers/SizedBox.dart';
 part 'paint/Painter.dart';
 part 'context/context.dart';
-
-
-
-
+part 'Reactive_widgets/Rocket.dart';
+part 'Singleton/Rocket.dart';
+part 'Singleton/SingletonBaseClass.dart';

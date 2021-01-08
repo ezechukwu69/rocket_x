@@ -32,7 +32,9 @@ extension ContextExtension on BuildContext {
   /// ```
   /// {@end-tool}
   void xPop({dynamic result}) {
-    result != null ? Navigator.of(this).pop(result) : Navigator.of(this).pop(result);
+    result != null
+        ? Navigator.of(this).pop(result)
+        : Navigator.of(this).pop(result);
   }
 
   /// Calls [pop] repeatedly until the predicate returns true.
@@ -72,13 +74,16 @@ extension ContextExtension on BuildContext {
   ///
   ///  * [restorablePush], which pushes a route that can be restored during
   ///    state restoration.
-  void xPush({@required Object page,bool fullscreenDialog, bool maintainState, RouteSettings settings}) {
+  void xPush(
+      {@required Object page,
+      bool fullscreenDialog,
+      bool maintainState,
+      RouteSettings settings}) {
     Navigator.of(this).push(MaterialPageRoute(
-      builder: (context) => page,
-      fullscreenDialog: fullscreenDialog ?? false,
-      maintainState: maintainState ?? true,
-      settings: settings ?? RouteSettings()
-    ));
+        builder: (context) => page,
+        fullscreenDialog: fullscreenDialog ?? false,
+        maintainState: maintainState ?? true,
+        settings: settings ?? RouteSettings()));
   }
 
   /// Push a named route onto the navigator.

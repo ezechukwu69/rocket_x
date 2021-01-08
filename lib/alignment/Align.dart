@@ -1,7 +1,7 @@
 part of rocket_x;
 
 extension AlignmentExtension on Align {
-  Align _align({Key key,double widthFactor, double heightFactor}) {
+  Align _align({Key key, double widthFactor, double heightFactor}) {
     return Align(
       child: this.child,
       alignment: this.alignment,

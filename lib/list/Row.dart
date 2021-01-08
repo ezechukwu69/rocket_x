@@ -1,6 +1,7 @@
 part of rocket_x;
 
 extension RowExtension on Row {
+  /// Adds a [MainAxisAlignment] to the Row widget
   Row xMainAxisAlignment(MainAxisAlignment data) {
     return Row(
       children: this.children,
@@ -14,6 +15,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Adds a [CrossAxisAlignment] to the Column widget
   Row xCrossAxisAlignment(CrossAxisAlignment data) {
     return Row(
       children: this.children,
@@ -27,6 +29,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Adds a [Key] to the Column widget
   Row xKey(Key data) {
     return Row(
       children: this.children,
@@ -40,6 +43,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Adds a [TextDirection] to the Column widget
   Row xTextDirection(TextDirection data) {
     return Row(
       children: this.children,
@@ -53,6 +57,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Adds a vertical direction config to the Column widget
   Row xVerticalDirection(VerticalDirection data) {
     return Row(
       children: this.children,
@@ -66,6 +71,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Sets the main Axis Size of the widget
   Row xMainAxisSixe(MainAxisSize data) {
     return Row(
       children: this.children,
@@ -79,6 +85,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Adds a [TextBaseline] to the column
   Row xTextBaseline(TextBaseline data) {
     return Row(
       children: this.children,
@@ -92,6 +99,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Append a [List] of [Widget] to the Column
   Row xAppendAll(List<Widget> data) {
     List<Widget> setter = this.children;
     setter.addAll(data.toList());
@@ -107,6 +115,7 @@ extension RowExtension on Row {
     );
   }
 
+  /// Append a [Widget] to the Column
   Row xAppend(Widget data) {
     List<Widget> setter = this.children;
     setter.add(data);

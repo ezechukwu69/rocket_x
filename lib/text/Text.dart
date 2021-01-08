@@ -1,21 +1,6 @@
 part of rocket_x;
 
-
 extension TextExtension on Text {
-  // key: this.key
-  // style: this.style,
-  // locale: this.locale,
-  // semanticsLabel: this.semanticsLabel,
-  // textWidthBasis: this.textWidthBasis,
-  // maxLines: this.maxLines,
-  // overflow: this.overflow,
-  // softWrap: this.softWrap,
-  // strutStyle: this.strutStyle,
-  // textAlign: this.textAlign,
-  // textDirection: this.textDirection,
-  // textHeightBehavior: this.textHeightBehavior,
-  // textScaleFactor: this.textScaleFactor,
-
   /// ### key setting function
   ///
   ///Example
@@ -61,7 +46,6 @@ extension TextExtension on Text {
   /// ```
   ///  Text text = "Hello".toText.xTextAlign(Alignment.center);
   /// ```
-
   Text xTextAlign(TextAlign alignment) {
     return Text(
       this.data,
@@ -81,6 +65,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the textScaleFactor of the [Text]
   Text xTextScaleFactor(double data) {
     return Text(
       this.data,
@@ -100,6 +85,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the textHeightBehavior of the [Text]
   Text xTextHeightBehavior(TextHeightBehavior data) {
     return Text(
       this.data,
@@ -119,6 +105,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the textDirection of the [Text]
   Text xTextDirection(TextDirection data) {
     return Text(
       this.data,
@@ -138,11 +125,14 @@ extension TextExtension on Text {
     );
   }
 
+  // sets the locale of the [Text]
   Text xLocale(Locale locale) {
     return Text(
       this.data,
       key: this.key,
-      style: this.style != null ? this.style.copyWith(locale: locale) : TextStyle(locale: locale),
+      style: this.style != null
+          ? this.style.copyWith(locale: locale)
+          : TextStyle(locale: locale),
       locale: this.locale,
       semanticsLabel: this.semanticsLabel,
       textWidthBasis: this.textWidthBasis,
@@ -157,7 +147,8 @@ extension TextExtension on Text {
     );
   }
 
-  Text xStructStyle(StrutStyle data) {
+  /// sets the strutStyle of the [Text]
+  Text xStrutStyle(StrutStyle data) {
     return Text(
       this.data,
       key: this.key,
@@ -176,6 +167,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the SoftWrap property
   Text xSoftWrap(bool data) {
     return Text(
       this.data,
@@ -195,6 +187,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the TextOverflow property
   Text xTextOverflow(TextOverflow data) {
     return Text(
       this.data,
@@ -214,6 +207,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the MaxLines property
   Text xMaxLines(int data) {
     return Text(
       this.data,
@@ -233,6 +227,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the TextWidthBasis property
   Text xTextWidthBasis(TextWidthBasis data) {
     return Text(
       this.data,
@@ -252,6 +247,7 @@ extension TextExtension on Text {
     );
   }
 
+  /// sets the SemanticLabel property
   Text xSemanticLabel(String data) {
     return Text(
       this.data,
@@ -270,6 +266,4 @@ extension TextExtension on Text {
       textScaleFactor: this.textScaleFactor,
     );
   }
-
-
 }
