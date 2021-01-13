@@ -1,10 +1,16 @@
-## [1.0.0] 08/02/2021
+## [1.0.0+2] 13/01/2021
+* Fixed FractionallySizedBox
+
+## [1.0.0+1] 08/01/2021
+* Fixed analytics error
+
+## [1.0.0] 08/01/2021
 * Rename xContainer from build to xBuild
 
-## [0.0.1+9] 08/02/2021
+## [0.0.1+9] 08/01/2021
 * Added stateless widget support
 
-## [0.0.1+8] 08/02/2021
+## [0.0.1+8] 08/01/2021
 * Added dependency injection.
 * Added state management options [ XListenable ] and [ XValue ] to controller.
 * Formatted with dartfmt.

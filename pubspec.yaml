@@ -1,6 +1,6 @@
 name: rocket_x
 description: This is a flutter package that simplifies UI development as much as possible by getting rid of unnecessary boiler plate code and widget nesting
-version: 1.0.0
+version: 1.0.0+2
 homepage: https://github.com/ezechukwu69/rocket_x
 
 environment:

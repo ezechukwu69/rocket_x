@@ -26,7 +26,7 @@ extension FractionExtension on FractionallySizedBox {
   }
 
   /// Sizing the fractionally sized widget
-  FractionallySizedBox build({double heightFactor, double widthFactor}) {
+  FractionallySizedBox xBuild({double heightFactor, double widthFactor}) {
     return _fraction(widthFactor: widthFactor, heightFactor: heightFactor);
   }
 }
