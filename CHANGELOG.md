@@ -1,3 +1,7 @@
+## [1.0.0+3] 18/01/2021
+* Added XPrimitives and XIterables for Observable values
+* Added X widget for listening to XPrimitives and updating UI
+
 ## [1.0.0+2] 13/01/2021
 * Fixed FractionallySizedBox
 

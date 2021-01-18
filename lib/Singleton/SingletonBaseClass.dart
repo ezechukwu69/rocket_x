@@ -9,4 +9,9 @@ abstract class RocketController with ChangeNotifier {
     log('${this.runtimeType} disposed', name: 'RocketX');
     super.dispose();
   }
+
+  void setState(VoidCallback callback) {
+    callback.call();
+    super.notifyListeners();
+  }
 }

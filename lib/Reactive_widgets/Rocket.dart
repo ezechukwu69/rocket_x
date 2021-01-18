@@ -3,9 +3,17 @@ part of rocket_x;
 /// A widget that listenens to changes in the [RocketController] or [ChangeNotifier] and update when [notifyListeners()] method is called
 class XListenable<T extends ChangeNotifier> extends StatefulWidget {
   final T notifier;
+  final VoidCallback onInit;
 
   final Widget Function(BuildContext context, T value) builder;
-  XListenable({this.notifier, Widget widget, this.builder});
+  XListenable(
+      {@required this.notifier,
+      Widget widget,
+      @required this.builder,
+      this.onInit}) {
+    assert(this.notifier != null);
+    assert(this.builder != null);
+  }
   @override
   State<StatefulWidget> createState() => _XListenableState<T>();
 }
@@ -17,9 +25,11 @@ class _XListenableState<T extends ChangeNotifier>
   @override
   void initState() {
     super.initState();
+    if (widget.onInit != null) {
+      widget.onInit.call();
+    }
     notifier = widget.notifier;
     widget.notifier.addListener(() {
-      print("change detected");
       setState(() {
         notifier = widget.notifier;
       });
