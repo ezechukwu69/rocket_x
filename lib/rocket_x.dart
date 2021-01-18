@@ -1,5 +1,6 @@
 library rocket_x;
 
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
@@ -21,3 +22,6 @@ part 'context/context.dart';
 part 'Reactive_widgets/Rocket.dart';
 part 'Singleton/Rocket.dart';
 part 'Singleton/SingletonBaseClass.dart';
+part 'Reactive_values/XPrimitives.dart';
+part 'Reactive_values/XIterables.dart';
+part 'Reactive_values/Reactive_primitives_extensions.dart';

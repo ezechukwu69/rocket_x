@@ -19,7 +19,7 @@ void main() {
       String string = "Hello";
       var text = string.xToText.xKey(Key("Hello")).xTextAlign(TextAlign.center);
       expect(text.data, "Hello");
-         
+
       expect(text.key, Key("Hello"));
       expect(text.textAlign, TextAlign.center);
     });
@@ -30,7 +30,7 @@ void main() {
           .xMaxLines(2)
           .xTextColor(Colors.black87)
           .xFontSize(18);
-       
+
       expect(text.style.fontSize, 18);
       expect(text.style.color, Colors.black87);
       expect(text.style.wordSpacing, 2);

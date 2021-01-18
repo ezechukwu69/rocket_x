@@ -40,7 +40,7 @@ class _XListenableState<T extends ChangeNotifier>
 
 /// A widget that listenens to changes in the [ValueNotifier] and updates when value changes
 class XValue<T> extends StatelessWidget {
-  final ValueNotifier data;
+  final ValueNotifier<T> data;
   final Function(BuildContext context, T cValue, Widget child) builder;
   final Widget child;
   XValue(this.data, {this.builder, this.child});
@@ -51,5 +51,30 @@ class XValue<T> extends StatelessWidget {
       valueListenable: data,
       builder: builder,
     );
+  }
+}
+
+class X extends StatefulWidget {
+  final Widget Function() builder;
+  X(this.builder);
+  @override
+  _XState createState() => _XState();
+}
+
+class _XState extends State<X> {
+  @override
+  void initState() {
+    super.initState();
+    RocketXListener.reloadListener.listen((event) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.builder.call();
   }
 }

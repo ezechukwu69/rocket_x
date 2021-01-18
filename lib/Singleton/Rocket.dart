@@ -19,10 +19,8 @@ class RocketX {
   static T fetch<T extends RocketController>() {
     try {
       T _tempFields = _fields.firstWhere((e) => e.runtimeType == T);
-      if (_tempFields != null) {
-        return _tempFields;
-      }
-      return null;
+      assert(_tempFields != null);
+      return _tempFields;
     } catch (e) {
       // return null;
       throw Exception(
@@ -45,4 +43,14 @@ class RocketX {
   static int get length {
     return _fields.length;
   }
+}
+
+class RocketXListener {
+  static StreamController<bool> reloadController = StreamController.broadcast();
+
+  static void reload() {
+    reloadController.add(true);
+  }
+
+  static Stream get reloadListener => reloadController.stream;
 }
