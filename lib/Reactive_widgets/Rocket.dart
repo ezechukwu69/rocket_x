@@ -77,9 +77,11 @@ class _XState extends State<X> {
   @override
   void initState() {
     super.initState();
-    if (mounted) {
-      RocketXListener.reloadListener.listen((event) => setState(() {}));
-    }
+    RocketXListener.reloadListener.listen((event) {
+      if (mounted) {
+        setState(() {});
+      }
+    });
   }
 
   @override

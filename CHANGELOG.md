@@ -1,3 +1,8 @@
+## [1.0.0+4] 08/02/2021
+* Fixed the RocketX register and fetch algoriths
+* Minor changes and fixes to XListenable
+* Added MultiListenable, this allows listening to multiple RocketControllers
+
 ## [1.0.0+3] 18/01/2021
 * Added XPrimitives and XIterables for Observable values
 * Added X widget for listening to XPrimitives and updating UI
