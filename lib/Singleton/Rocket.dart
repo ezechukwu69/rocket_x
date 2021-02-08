@@ -4,16 +4,18 @@ class RocketX {
   static List<RocketController> _fields = <RocketController>[];
 
   static T register<T extends RocketController>(T controller) {
-    T _tempFields =
-        _fields.firstWhere((e) => e.runtimeType == T, orElse: () => controller);
-    // if (_fields.length > 0) {
-    //   if (_tempFields != null) {
-    //     return _tempFields;
-    //   // }
-    // }
-    _tempFields.onInit();
-    _fields.add(_tempFields);
-    return controller;
+    T _tempFields;
+    for (var e in _fields) {
+      if (e.runtimeType == T) {
+        _tempFields = e;
+      }
+    }
+    if (_tempFields != null) {
+      return _tempFields;
+    } else {
+      _fields.add(controller);
+      return controller;
+    }
   }
 
   static T fetch<T extends RocketController>() {

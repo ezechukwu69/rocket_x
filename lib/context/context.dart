@@ -55,6 +55,14 @@ extension ContextExtension on BuildContext {
     Navigator.of(this).popUntil(predicate);
   }
 
+  void xPushAndClearBackstack({@required Object page}) {
+    Navigator.of(this).pushAndRemoveUntil(
+        MaterialPageRoute(
+          builder: (context) => page,
+        ),
+        (route) => false);
+  }
+
   /// Push the given route onto the navigator.
   ///
   /// {@macro flutter.widgets.navigator.push}
